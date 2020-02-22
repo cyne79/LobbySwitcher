@@ -1,0 +1,70 @@
+#
+#     _    ____ ___  ___  _   _ ____ _ _ _ _ ___ ____ _  _ ____ ____
+#     |    |  | |__] |__]  \_/  [__  | | | |  |  |    |__| |___ |__/
+#     |___ |__| |__] |__]   |   ___] |_|_| |  |  |___ |  | |___ |  \    v1.0.2 by cyne
+#
+
+messages:
+  prefix: '&bLobby &8┃ '
+  no_permission: '&cYou are not permitted to use this command.'
+  server_connect: '&7You will be &aconnected &7to &f%server%&8..'
+  server_offline: '&cThis lobby is currently offline.'
+  server_already_connected: '&cYou are already connected to this lobby.'
+
+inventory:
+  rows: 3
+  title: '&8● &fLobbys'
+
+# To add a new lobby-server use the ingame command or the following template:
+#
+# example-server:                     # Name of the server in the bungeecord config.yml
+#   host: 127.0.0.1                   # IP-Address of the server
+#   port: 25565                       # Port of the server
+#   displayname: Example ServerInfo   # Name shown in the inventory
+#   slot: 0                           # Inventory slot the item should be placed on
+servers:
+  lobby-1:
+    host: 127.0.0.1
+    port: 25566
+    displayname: Lobby-1
+    slot: 10
+  lobby-2:
+    host: 127.0.0.1
+    port: 25567
+    displayname: Lobby-2
+    slot: 11
+
+layouts:
+  online:
+    material: STAINED_CLAY
+    subid: 5
+    glow: false
+    displayname: '&b%server%'
+    lore:
+      - ' &8● &7This server is &aonline&8.'
+      - ' &8● &7Players online&8: &f%players%'
+      - ''
+      - ' &8» &7Click to &aconnect &7to this server'
+  offline:
+    material: STAINED_CLAY
+    subid: 14
+    glow: false
+    displayname: '&b%server%'
+    lore:
+      - ' &8● &7This server is &coffline&8.'
+  current:
+    material: STAINED_CLAY
+    subid: 5
+    glow: true
+    displayname: '&b%server%'
+    lore:
+      - ' &8● &7You &aare connected &7to this server&8.'
+      - ' &8● &7Players online&8: &f%players%'
+
+hotbarItem:
+  material: WATCH
+  subid: 0
+  displayname: '&bLobbys &8× &7rightclick'
+  lore: []
+  slot: 8
+
